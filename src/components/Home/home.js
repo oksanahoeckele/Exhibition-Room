@@ -10,6 +10,7 @@ class App extends Component {
 
         <Menu/>
 <<<<<<< HEAD
+<<<<<<< HEAD
        <liveVideo/>
        
         <div id="hero" className="carousel slide carousel-fade" data-ride="carousel">
@@ -46,6 +47,9 @@ class App extends Component {
         </div>
 =======
 >>>>>>> 299749df5bfb7c7e91b0b8bac4ef19c676d2b0e5
+=======
+
+>>>>>>> 12471cfb473410db3ba0bb6f301144941ff01625
 
         <div className="container section">
         <div className="row">
