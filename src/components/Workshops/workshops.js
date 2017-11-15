@@ -24,6 +24,7 @@ class Workshops extends Component {
         <div id="hero" className="carousel slide carousel-fade" data-ride="carousel">
 
         </div>
+
         </div>
         </div>
       </div>
