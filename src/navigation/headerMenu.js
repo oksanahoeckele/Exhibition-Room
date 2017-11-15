@@ -1,47 +1,53 @@
 import React, { Component } from 'react';
 import {
-  Route,
-  HashRouter
+  Link
 } from "react-router-dom";
 
 
 
 class HeaderMenu extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loaded: true
+    }
+  }
   render() {
+    console.log(this.props.match)
+    const workshops = window.location.hash.match('#/workshops') ? 'active' : '';
+    const live_stream = window.location.hash.match('#/live_stream') ? 'active' : '';
     return (
       <div>
-        <div class="navbar banner--clone banner--stick" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-            <a href="index.html" class="logo" title="Craft beer landing page">
-            <img src="images/logo.svg" alt="Craft Beer HTML Template" />
-            </a>
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar top-bar"></span>
-              <span class="icon-bar middle-bar"></span>
-              <span class="icon-bar bottom-bar"></span>
+        <div className="navbar banner--clone banner--stick" role="navigation">
+          <div className="container">
+            <div className="navbar-header">
+            <Link to="/" className="logo" title="Craft beer landing page">
+              <img src="images/logo.svg" alt="Craft Beer HTML Template" />
+            </Link>
+            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span className="sr-only">Toggle navigation</span>
+              <span className="icon-bar top-bar"></span>
+              <span className="icon-bar middle-bar"></span>
+              <span className="icon-bar bottom-bar"></span>
             </button>
             </div>
-            <div class="navbar-collapse collapse">
-              <ul id="menu-primary" class="nav navbar-nav"  >
-                <li class="active">
-                  <a href="index.html">Home</a>
+            <div className="navbar-collapse collapse">
+              <ul className="nav navbar-nav" style={{marginTop: '-24.5px'}} >
+
+                <li className={workshops}>
+                  <Link to="/workshops">Workshops</Link>
                 </li>
-                <li>
-                  <a href="whats-on.html">What's on</a>
+                <li className={live_stream}>
+                  <Link to="/live_stream">Test</Link>
                 </li>
-                <li>
-                  <a href="shortcodes.html">Shortcodes</a>
-                </li>
-                <li class="dropdown">
-                  <a href="news.html">News</a>
-                <ul class="dropdown-menu">
-                  <li><a href="news-single.html">News single</a></li>
+                <li className="dropdown">
+                  <Link to="/">News</Link>
+                <ul className="dropdown-menu">
+                  <li><Link to="/">News single</Link></li>
                 </ul>
                 </li>
                 <li>
-                <a href="contact.html">Contact</a>
+                <Link to="/">Contact</Link>
                 </li>
               </ul>
             </div>

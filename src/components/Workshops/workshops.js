@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import {
-  Route,
-  HashRouter
+  Link
 } from "react-router-dom";
 import Menu from './../../navigation/headerMenu'
 import LiveVideo from './liveVideo'
-
 
 
 class Workshops extends Component {

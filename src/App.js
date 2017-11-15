@@ -6,7 +6,7 @@ import {
 
 import Home from './components/Home/home'
 import Workshops from './components/Workshops/workshops'
-
+import LiveStream from './components/LiveStream/liveStream'
 
 class App extends Component {
   render() {
@@ -15,6 +15,7 @@ class App extends Component {
         <div>
           <Route exact path="/" component={Home} />
           <Route exact path="/workshops" component={Workshops} />
+          <Route exact path="/live_stream" component={LiveStream} />
         </div>
       </HashRouter>
     );
