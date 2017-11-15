@@ -17,6 +17,7 @@ class Workshops extends Component {
         <Menu/>
 
          <div id="hero" className="carousel slide carousel-fade" data-ride="carousel">
+<<<<<<< HEAD
 
 
 
@@ -24,6 +25,8 @@ class Workshops extends Component {
         <div id="hero" className="carousel slide carousel-fade" data-ride="carousel">
 
         </div>
+=======
+>>>>>>> 299749df5bfb7c7e91b0b8bac4ef19c676d2b0e5
         </div>
         </div>
       </div>
