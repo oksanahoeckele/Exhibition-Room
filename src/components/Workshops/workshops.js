@@ -4,6 +4,8 @@ import {
   HashRouter
 } from "react-router-dom";
 import Menu from './../../navigation/headerMenu'
+import LiveVideo from './liveVideo'
+
 
 
 class Workshops extends Component {
@@ -15,6 +17,14 @@ class Workshops extends Component {
         <Menu/>
 
          <div id="hero" className="carousel slide carousel-fade" data-ride="carousel">
+
+
+
+        <LiveVideo/>
+        <div id="hero" className="carousel slide carousel-fade" data-ride="carousel">
+
+        </div>
+
         </div>
         </div>
       </div>
