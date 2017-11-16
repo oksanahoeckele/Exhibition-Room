@@ -13,7 +13,7 @@ class HeaderMenu extends Component {
     }
   }
   render() {
-    console.log(this.props.match)
+
     const workshops = window.location.hash.match('#/workshops') ? 'active' : '';
     const live_stream = window.location.hash.match('#/live_stream') ? 'active' : '';
     return (
