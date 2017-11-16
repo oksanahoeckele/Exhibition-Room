@@ -1,8 +1,39 @@
 import React, { Component } from 'react';
 import Menu from './../../navigation/headerMenu'
+import firebase from 'firebase';
+
+var config = {
+    apiKey: "AIzaSyBlTqOf1y1kRjquYdPLmUT7gNbP46XgIb0",
+
+    // Only needed if using Firebase Realtime Database (which we will be in this example)
+    authDomain: "fb-hackaton.firebaseapp.com",
+    databaseURL: "https://fb-hackaton.firebaseio.com"
+
+    // Only needed if using Firebase Authentication
+    // authDomain: "<YOUR-AUTH-DOMAIN>",
+
+    // Only needed if using Firebase Storage
+    // storageBucket: "<YOUR-STORAGE-BUCKET>.appspot.com"
+  };
+
+firebase.initializeApp(config);
+
+class Home extends Component {
 
 
-class App extends Component {
+  componentWillMount(){
+    // let database = firebase.database().ref("items")
+    // console.log(database)
+    // let database = firebase.database().ref('users/3').set({
+    //     username: 'marito2',
+    //     email: 'marito@lsls.cmom'
+    // });
+    let test = firebase.database().ref('/users/2').once('value').then(function(snapshot) {
+      var username = (snapshot.val()) || 'Anonymous';
+      console.log(username)
+    });
+    
+  }
   render() {
     return (
       <div>
@@ -1175,4 +1206,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Home;
