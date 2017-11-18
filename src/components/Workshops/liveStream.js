@@ -3,29 +3,24 @@ import {
   Link
 } from "react-router-dom";
 import Menu from './../../navigation/headerMenu'
-import LiveVideo from './liveVideo'
 
 
-class Workshops extends Component {
+
+class LiveStream extends Component {
   render() {
     return (
       <div>
-        <div className="wrapper">
+
 
         <Menu/>
 
+        </div>
 
-
-
-
-        <LiveVideo/>
-
-
-
+        </div>
         </div>
       </div>
     );
   }
 }
 
-export default Workshops;
+export default LiveStream;
